@@ -30,6 +30,9 @@ Servers
      - {{server.description()}}
 {%- endfor %}
 
+Variables
+---------
+
 {%- for serverName, server in asyncapi.servers() %}
 {% if server.variables() | length > 0 -%}
 
@@ -49,7 +52,8 @@ Servers
 {% endif %}
 {%- endfor -%}
 
-{% if server.security() -%}
+Security
+--------
 
 {%- for serverName, server in asyncapi.servers() %}
 {% if server.security() | length > 0-%}
