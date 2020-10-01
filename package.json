@@ -1,23 +1,24 @@
 {
-  "name": "@asyncapi/markdown-template",
-  "version": "0.10.0",
-  "description": "Markdown template for the AsyncAPI generator.",
+  "name": "@asyncapi/sphinx-template",
+  "version": "0.0.1",
+  "description": "Sphinx rST template for the AsyncAPI generator.",
   "keywords": [
     "asyncapi",
     "generator",
-    "markdown",
+    "sphinx",,
+    "rST",
     "template"
   ],
-  "author": "Fran Mendez <fmvilas@gmail.com> (fmvilas.com)",
+  "author": "Heiko 'riot' Weinen <riot@isomer.eu> (isomer.eu)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asyncapi/markdown-template.git"
+    "url": "git+https://github.com/asyncapi/sphinx-template.git"
   },
   "bugs": {
-    "url": "https://github.com/asyncapi/markdown-template/issues"
+    "url": "https://github.com/asyncapi/sphinx-template/issues"
   },
-  "homepage": "https://github.com/asyncapi/markdown-template#readme",
+  "homepage": "https://github.com/asyncapi/sphinx-template#readme",
   "scripts": {
     "test": "echo \"No test specified yet\"",
     "release": "semantic-release",
