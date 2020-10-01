@@ -1,8 +1,10 @@
-{% from "./parameters.md" import parameters %}
-{% from "./operation.md" import operation %}
+{% from "./parameters.rst" import parameters %}
+{% from "./operation.rst" import operation %}
 {% macro channel(chan, channelName) %}
 
-<a name="channel-{{channelName}}"></a>
+.. _{{channelName}}:
+
+{{ channelName | generateHeader("=") }}
 
 {% if chan.description() -%}
 {{ chan.description() | safe }}
@@ -12,10 +14,12 @@
 {{- parameters(chan.parameters()) -}}
 {% endif -%}
 
-{% if chan.hasPublish() -%}
+Messages
+--------
+{%- if chan.hasPublish() -%}
 {{ operation(chan.publish(), channelName) }}
-{% endif -%}
-{% if chan.hasSubscribe() -%}
+{%- endif -%}
+{%- if chan.hasSubscribe() -%}
 {{ operation(chan.subscribe(), channelName) }}
-{% endif -%}
+{%- endif -%}
 {% endmacro %}

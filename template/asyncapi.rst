@@ -1,4 +1,4 @@
-# {{asyncapi.info().title()}} {{asyncapi.info().version()}} documentation
+{{(asyncapi.info().title() + " " + asyncapi.info().version() + " documentation")|generateHeader("#", true)}}
 
 {% if asyncapi.info().ext('x-logo') -%}
 ![{{asyncapi.info().title()}} logo]({{asyncapi.info().ext('x-logo')}})
@@ -7,16 +7,18 @@
 {% if asyncapi.info().description() -%}{{ asyncapi.info().description() | safe }}
 {% endif -%}
 
-## Table of Contents
+
+Table of Contents
+*****************
 
 {% if asyncapi.info().termsOfService() -%}
-* [Terms of Service](#termsOfService)
+* :ref:`terms_of_service`
 {% endif -%}
 {% if asyncapi.hasServers() -%}
-* [Servers](#servers)
+* :ref:`servers`
 {% endif -%}
 {% if asyncapi.hasChannels() -%}
-* [Channels](#channels)
+* :ref:`channels`
 {% endif -%}
 
-{% include "partials/content.md" %}
+{% include "partials/content.rst" %}

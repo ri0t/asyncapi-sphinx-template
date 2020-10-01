@@ -1,4 +1,4 @@
-{% from "./schema-table.md" import schemaTable %}
+{% from "./schema-table.rst" import schemaTable %}
 {% macro schemaProp(prop, propName, required=false, path='', circularPropsParent) %}
 
 {{- schemaTable(prop, propName, required, path) -}}

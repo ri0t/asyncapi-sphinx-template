@@ -1,12 +1,14 @@
-{% from "./schema.md" import schema %}
+{% from "./schema.rst" import schema %}
 
 {% macro parameters(params, hideTitle=false) %}
 {% if not hideTitle -%}
-#### Channel Parameters
+Channel Parameters
+------------------
 {%- endif %}
 
 {% for paramName, param in params -%}
-##### {{paramName}}
+{{ paramName | generateHeader('^') }}
+
 
 {% if param.description() -%}
 {{param.description() | safe}}

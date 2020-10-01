@@ -1,5 +1,5 @@
-{% from "./schema.md" import schema %}
-{% from "./tags.md" import tags %}
+{% from "./schema.rst" import schema %}
+{% from "./tags.rst" import tags %}
 
 {% macro message(msg) %}
 {% if msg.summary() -%}
@@ -11,52 +11,65 @@
 {% endif -%}
 
 {% if msg.headers() -%}
-##### Headers
+Headers
+~~~~~~~
 
 {{ schema(msg.headers(), 'Message Headers', hideTitle=true) }}
 
 {% if msg | getHeadersExamples %}
-###### Examples of headers
+
+{{ "Examples of headers"|generateHeader("~") }}
 
 {% for ex in msg | getHeadersExamples -%}
-```json
-{{ ex | dump(2) | safe }}
-```
+
+.. highlight:: json
+
+    {{ ex | dump(2) | safe | indent}}
+
 {% endfor -%}
 {% else -%}
-###### Example of headers _(generated)_
+Example of headers _(generated)_
+................................
 
-```json
-{{ msg.headers().json() | generateExample | safe }}
-```
+.. highlight:: json
+
+    {{ msg.headers().json() | generateExample | safe | indent}}
+
 {% endif %}
 {% endif %}
 
 {% if msg.payload() -%}
-##### Payload
+Payload
+~~~~~~~
 
 {{ schema(msg.payload(), 'Message Payload', hideTitle=true) }}
 
 {% if msg | getPayloadExamples %}
-###### Examples of payload
+Examples of payload
+...................
 
 {% for ex in msg | getPayloadExamples %}
-```json
-{{ ex | dump(2) | safe }}
-```
+
+.. highlight:: json
+
+    {{ ex | dump(2) | safe | indent}}
+
 {% endfor -%}
 {% else -%}
-###### Example of payload _(generated)_
+Example of payload _(generated)_
+................................
 
-```json
-{{ msg.payload().json() | generateExample | safe }}
-```
+.. highlight:: json
+
+    {{ msg.payload().json() | generateExample | safe | indent}}
+
 {% endif -%}
 {% endif -%}
 
 
 {% if msg.hasTags() %}
-##### Tags
+Tags
+~~~~
 
 {{ tags(msg.tags()) }}
 {% endif %}
