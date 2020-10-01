@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+        "login": "ri0t",
+        "name": "Heiko 'ri0t' Weinen",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1938065?v=4",
+        "profile": "http://www.hackerfleet.eu",
+        "contributions": [
+          "code",
+          "doc",
+        ]
+      }
+    {
       "login": "fmvilas",
       "name": "Fran Méndez",
       "avatar_url": "https://avatars3.githubusercontent.com/u/242119?v=4",
@@ -50,7 +60,7 @@
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "markdown-template",
+  "projectName": "sphinx-template",
   "projectOwner": "asyncapi",
   "repoType": "github",
   "repoHost": "https://github.com",
