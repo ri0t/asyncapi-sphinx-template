@@ -29,10 +29,10 @@ npm install -g @asyncapi/generator
 
 ## Contributors ✨
 
-ri0t forked this from the nice @asyncapi/markdown-template.
+ri0t forked this from the nice [@asyncapi/markdown-template](https://github.com/asyncapi/markdown-template).
 
 Not having read the complete specs beforehand and adding asyncapi support for 
-another project (@isomeric/isomer) at the same time was a very hands-on and quick learning experience.
+another project ([@isomeric/isomer](https://github.com/isomeric/isomer)) at the same time was a very hands-on and quick learning experience.
 
 *Caveat:* This may result in some bugs in the layout, although i (more or less) 
 followed the original markdown template path of stringing things together.
