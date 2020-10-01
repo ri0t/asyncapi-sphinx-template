@@ -21,9 +21,9 @@ function isRequired(obj, key) {
 filter.isRequired = isRequired;
 
 function acceptedValues(items) {
-    if (!items) return '<em>Any</em>';
+    if (!items) return '*Any*';
 
-    return items.map(i => `<code>${i}</code>`).join(', ');
+    return items.map(i => `\`\`${i}\`\``).join(', ');
 }
 filter.acceptedValues = acceptedValues;
 
