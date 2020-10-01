@@ -29,6 +29,12 @@ servers:
         enum:
           - '1883'
           - '8883'
+  development:
+    url: mqtt://localhost:1883
+    protocol: mqtt
+    description: Test broker (local)
+    security:
+      - user-password: []
 
 defaultContentType: application/json
 
