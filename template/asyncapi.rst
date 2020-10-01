@@ -11,6 +11,12 @@
 Table of Contents
 *****************
 
+
+.. toctree::
+        :maxdepth: 1
+        :glob:
+
+
 {% if asyncapi.info().termsOfService() -%}
 * :ref:`terms_of_service`
 {% endif -%}
