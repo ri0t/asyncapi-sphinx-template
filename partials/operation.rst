@@ -10,8 +10,7 @@
 {% set header = header + channelName %}
 
 {{- header | generateHeader('^') }}
-
-{% if summary -%} *{{ summary }}* {% endif -%}
+{% if summary %} *{{ summary }}* {% endif %}
 
 {{ op.description() }}
 

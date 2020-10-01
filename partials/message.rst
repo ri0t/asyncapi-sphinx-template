@@ -28,7 +28,7 @@ Headers
 
 {% endfor -%}
 {% else -%}
-Example of headers _(generated)_
+Example of headers *(generated)*
 ................................
 
 .. highlight:: json
@@ -56,7 +56,7 @@ Examples of payload
 
 {% endfor -%}
 {% else -%}
-Example of payload _(generated)_
+Example of payload *(generated)*
 ................................
 
 .. highlight:: json

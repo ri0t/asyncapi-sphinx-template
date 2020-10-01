@@ -1,11 +1,11 @@
-{{(asyncapi.info().title() + " " + asyncapi.info().version() + " documentation")|generateHeader("#", true)}}
+{{(asyncapi.info().title() + " " + asyncapi.info().version() + " API documentation")|generateHeader("#", true)}}
 
 {% if asyncapi.info().ext('x-logo') -%}
 ![{{asyncapi.info().title()}} logo]({{asyncapi.info().ext('x-logo')}})
 {% endif -%}
 
 {% if asyncapi.info().description() -%}{{ asyncapi.info().description() | safe }}
-{% endif -%}
+{% endif %}
 
 
 Table of Contents
