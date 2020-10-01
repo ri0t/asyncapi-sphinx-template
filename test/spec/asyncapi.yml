@@ -5,7 +5,8 @@ info:
   description: |
     The Smartylighting Streetlights API allows you to remotely manage the city lights.
 
-    ### Check out its awesome features:
+    Check out its awesome features:
+    *******************************
 
     * Turn a specific streetlight on/off 🌃
     * Dim a specific streetlight 😎
@@ -208,6 +209,9 @@ components:
       description: Date and time when the message was sent.
 
   securitySchemes:
+    user-password:
+      type: userPassword
+      description: Supply a user password
     apiKey:
       type: apiKey
       in: user
