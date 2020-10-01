@@ -31,8 +31,7 @@ Servers
 {%- endfor %}
 
 {%- for serverName, server in asyncapi.servers() %}
-
-{% if server.variables() -%}
+{% if server.variables() | length > 0 -%}
 
 .. list-table:: Variables for Server ``{{serverName}}``
    :header-rows: 1
@@ -48,10 +47,14 @@ Servers
      - {{ var.description() | safe }}
      {% endfor -%}
 {% endif %}
+{%- endfor -%}
 
 {% if server.security() -%}
 
-.. list-table::  Security Requirements
+{%- for serverName, server in asyncapi.servers() %}
+{% if server.security() | length > 0-%}
+
+.. list-table::  Security Requirements for Server ``{{serverName}}``
    :header-rows: 1
 
    * - Type
