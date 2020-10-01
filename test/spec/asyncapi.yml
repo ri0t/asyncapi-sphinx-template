@@ -20,6 +20,8 @@ servers:
     url: mqtt://test.mosquitto.org:{port}
     protocol: mqtt
     description: Test broker
+    security:
+      - user-password: []
     variables:
       port:
         description: Secure connection (TLS) is available through port 8883.
@@ -97,6 +99,7 @@ channels:
         $ref: '#/components/messages/dimLight'
   some.channel:
     subscribe:
+      operationId: someChannel
       description: this doesn't show in markdown!
       message:
         oneOf:
