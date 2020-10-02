@@ -6,7 +6,7 @@
 ## Usage
 
 ```
-ag asyncapi.yaml @asyncapi/sphinx-template -o output
+ag https://bit.ly/asyncapi https://github.com/ri0t/asyncapi-sphinx-template -o output
 ```
 
 If you don't have the AsyncAPI Generator installed, you can install it like this:
